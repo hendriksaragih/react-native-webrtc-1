@@ -57,7 +57,8 @@ class GetUserMediaImpl {
             cameraEnumerator = new Camera2Enumerator(reactContext);
         } else {
             Log.d(TAG, "Creating video capturer using Camera1 API.");
-            cameraEnumerator = new Camera1Enumerator(false);
+            cameraEnumerator = new Camera1NewEnumerator(false);
+            // cameraEnumerator = new Camera1Enumerator(false);
         }
     }
 
